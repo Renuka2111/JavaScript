@@ -1,0 +1,653 @@
+1.Even odd:
+function parity(n){
+
+    if(n%2==0){
+        console.log("Even")
+    }
+    else{
+        console.log("Odd")
+    }
+
+}
+parity(1);
+parity(2);
+
+2.String concatination:
+repeat=function repeat(str,count){
+    return new Array(count+1).join(str);
+}
+console.log(repeat('-',7));
+
+3.Array:
+var fourNums= [8, true,"abc",10];
+console.log(fourNums);
+
+4.Array of 100:
+var myArray= new Array(100);
+myArray[0]=10;
+myArray[1]=50;
+myArray[5]=10;
+
+console.log(myArray);
+
+5.String to numbr:
+var strings =["1.2","2.3","3.4"];
+var nums=strings.slice(',').map(Number);
+console.log(nums);
+output:[1.2, 2.3, 3.4]
+-----------------------------------------------------------------
+function half(x){
+    return (x/2);
+}
+undefined
+half(x)
+2.5
+-----------------------------------------------------------------
+function seven(){ x=7; return(x)};
+undefined
+seven();
+7
+------------------------------------------------------------------
+function xyz(a,b,c){
+    return((a+b)/c);
+}
+console.log(xyz(5,5,10));
+output:1
+console.log(xyz(1,1,0));
+output:Infinity
+console.log(xyz(-1,-1,0));
+potput:-Infinity
+console.log(xyz(1,-1,0));
+output:NaN
+------------------------------------------------------------------
+function isEven(n){
+    var arr=["Even","Odd"];
+    return arr[n%2];
+}
+isEven(9)
+"Odd"
+isEven(8)
+"Even"
+----------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>HelloWorld</title>
+    </head>
+    <body>
+        <script>
+            alert("Hello World");
+        </script>
+        
+
+        <script src="hello.js"></script>
+    
+
+    </body>
+
+</html>
+---------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>HelloWorld</title>
+    </head>
+    <body>
+        <script src="hello.js"></script>
+        <script>
+            var name=prompt("Please Enter Your Name:");
+            document.write("Hey "+name+" Have a Good Day!");
+        </script>
+    
+
+    </body>
+
+</html>
+-----------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>HelloWorld</title>
+    </head>
+    <body>
+        <script src="hello.js"></script>
+        <script>
+            var name=prompt("Please Enter Your Name:");
+            if(name=="Alice"|| name=="Bob"){
+            document.write("Hey "+name+" Have a Good Day!");}
+        </script>
+    
+
+    </body>
+
+</html>
+-------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>HelloWorld</title>
+    </head>
+    <body>
+        <script src="hello.js"></script>
+        <script>
+            var n=prompt("Please Enter number:");
+            var sum=0;
+            for(var i=1;i<=n;i++){
+                sum=sum+i;}
+            document.write(sum);
+        </script>
+    
+
+    </body>
+
+</html>
+-------------------------------------------------------
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>HelloWorld</title>
+    </head>
+    <body>
+        <script src="hello.js"></script>
+        <script>
+            var n=prompt("Please Enter number:");
+            var sum=0;
+            for(var i=1;i<=n;i++){
+                if(i%3===0 || i%5===0){
+                sum=sum+i;}}
+            document.write(sum);
+        </script>
+    
+
+    </body>
+
+</html>
+-----------------------------------------------
+HTML:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>HelloWorld</title>
+    </head>
+    <body>
+        <script src="hello.js"></script>
+        <form>
+            Enter Number<input type="number" id="number">
+            <br><br>
+            <input type="button" onclick="sum()" value="sum">
+            <input type="button" onclick="product()" value="product">
+        </form>
+        <p>Result:<span id="result"></span></p>
+    </body>
+
+</html>
+JAVAscript:
+function sum(){
+    var sum=0;
+    var n=document.getElementById("number").value;
+            for(var i=1;i<=n;i++){
+                sum=sum+i;}
+            document.getElementById("result").innerHTML=sum;
+}
+function product(){
+    var n=document.getElementById("number").value;
+    var product=1;
+            for(var i=1;i<=n;i++){
+                product=product*i;}
+                document.getElementById("result").innerHTML=product;
+}
+--------------------------------------------------------------------------------------------
+var number=prompt('Enter number:');
+for(var i=1;i<=12;i++){
+    var result=i*number;
+    console.log(number+"*"+i+"="+result);
+}
+1=5
+hello.js:43 5*2=10
+hello.js:43 5*3=15
+hello.js:43 5*4=20
+hello.js:43 5*5=25
+hello.js:43 5*6=30
+hello.js:43 5*7=35
+hello.js:43 5*8=40
+hello.js:43 5*9=45
+hello.js:43 5*10=50
+hello.js:43 5*11=55
+hello.js:43 5*12=60
+-----------------------------------------------------------------------------------------------
+var n=prompt('Enter number:');
+
+for(var j=1;j<=n;j++){
+    var flag=0;
+
+for (var i=2;i<j;i++){
+    if(j%i==0){
+        flag=1;
+        break;
+    }
+}
+if(j>1 && flag==0){
+console.log(j)
+}
+}
+2
+hello.js:52 3
+hello.js:52 5
+hello.js:52 7
+hello.js:52 11
+hello.js:52 13
+hello.js:52 17
+hello.js:52 19
+hello.js:52 23
+hello.js:52 29
+hello.js:52 31
+hello.js:52 37
+----------------------------------------------------------------------------------------------------
+var year=2021;
+var n=20;
+var count=0;
+
+while(count!=n){
+        year=year+1;
+        if((year%4===0)||(year%4===0 && year%100!==0)){
+            count++;
+            console.log(year);}
+        }
+output:     2024
+hello.js:48 2028
+hello.js:48 2032
+hello.js:48 2036
+hello.js:48 2040
+hello.js:48 2044
+hello.js:48 2048
+hello.js:48 2052
+hello.js:48 2056
+hello.js:48 2060
+hello.js:48 2064
+hello.js:48 2068
+hello.js:48 2072
+hello.js:48 2076
+hello.js:48 2080
+hello.js:48 2084
+hello.js:48 2088
+hello.js:48 2092
+hello.js:48 2096
+hello.js:48 2100
+-----------------------------------------------------------------------
+var array=[3,85,74,9,74,63,0];
+var largest=0;
+
+for(var i=0;i<=largest;i++){
+    if(array[i]>largest){
+        var largest=array[i];
+    }
+}
+console.log(largest);
+output:85
+--------------------------------------------------------------------------------
+List Reverse:
+var list=[8,9,5,7,3,"one",true];
+var reverselist=list.reverse();
+console.log(reverselist);
+output:[true, "one", 3, 7, 5, 9, 8]
+--------------------------------------------------------------------------------
+var a=[8,5,9,26,85,74,0];
+function checking(x){
+    
+    for(var i=0;i<=a.length-1;i++){
+        if(x==a[i]){
+        console.log("Element occures");
+    }
+}
+}
+checking(26);
+output:Element occures
+------------------------------------------------------------------------------------------
+
+var array=[1,2,3,4,5,6]
+console.log(array.filter(function(el,ind){
+    return ind%2===0;
+}));
+output:[1, 3, 5]
+-------------------------------------------------------------------------------------------
+Running Sum Example:
+var cumulativeSum=(sum =>value =>sum+=value)(0);
+console.log([5,10,3,2].map(cumulativeSum));
+output:
+(4) [5, 15, 18, 20]
+0: 5
+1: 15
+2: 18
+3: 20
+length: 4
+-----------------------------------------------------------------------------------------------------------
+function palindrome(str){
+    var len=str.length;
+    var mid=Math.floor(len/2);
+    for(var i=0;i<mid;i++){
+        if (str[i]!==str[len-1-i]){
+            return "Not Palindrome";
+        }
+    }
+    return "Palindome";
+}
+console.log(palindrome("madam"));
+output:Palindome
+----------------------------------------------------------------------------------------------------------------
+SumofNumbers using:
+1.for loop:
+
+function sum(n){
+    var s=0;
+    for(var i=1;i<=n;i++){
+        s=s+i;
+    }
+    return s;
+}
+
+console.log(sum(10));
+output:55
+
+2.while loo:
+
+function sum(n){
+    var s=0;
+    var i=1;
+    while(i<=n){
+        s=s+i;
+        i++;
+    }
+    return s;
+}
+
+console.log(sum(5));
+output:15
+
+3.Recursion:
+
+function sum(n){
+    if(n!=0)
+        return n+sum(n-1);
+    else
+        return n;
+}
+
+console.log(sum(12));
+output:78
+----------------------------------------------------------------------------------------------------------------
+Perfect squares:
+function perfectSquare(n){
+
+    for( var i=1;i<=n;i++){
+        if(Math.sqrt(i)==parseInt(Math.sqrt(i)))
+        console.log(i+" ");
+    }
+}
+perfectSquare(400);
+1 
+4  
+9 
+16 
+25 
+36 
+49 
+64 
+81 
+100 
+121 
+144 
+169 
+196 
+225 
+256 
+289 
+324 
+361
+400
+-------------------------------------------------------------------------------------------
+List Concatination:
+var list1= ['a','b','c'];
+var list2= [1,2,3];
+var result=list1.concat(list2);
+console.log(result);
+output:
+["a", "b", "c", 1, 2, 3]
+-----------------------------------------------------------------------
+List Concatination Alternate:
+var list1= ['a','b','c'];
+var list2= [1,2,3];
+
+var l=list1.length+list2.length;
+var r=[];
+var j=0,k=0;
+for(var i=0;i<l;i++){
+    if(i%2==0){
+        r[i]=list1[j++];
+    }
+    else{
+        r[i]=list2[k++];
+    }
+}
+
+console.log(r);
+output:["a", 1, "b", 2, "c", 3]
+----------------------------------------------------------------------------------------------------------------
+Sorting:
+var a=[1,4,6];
+var b=[2,3,5];
+var c=a.concat(b).sort();
+output:
+c
+(6) [1, 2, 3, 4, 5, 6]
+------------------------------------------------------------------------------------------------------------
+Rotate Array Function:
+function rotateArray(a,k){
+    for(var i=0;i<k;i++){
+    a.unshift(a.pop());
+    }
+    return a;
+}
+
+console.log(rotateArray([1,2,3,4,5,6],2));
+output:[5, 6, 1, 2, 3, 4] 
+-----------------------------------------------------------------------------------------------
+Fibonacci of 100 numbers:
+var fibonacci_series=function(n){
+    if(n===1){
+        return[0,1];
+    }
+    else{
+        var s=fibonacci_series(n-1);
+        s.push(s[s.length-1]+s[s.length-2]);
+        return s;
+    }
+}
+console.log(fibonacci_series(100));
+output:
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 
+10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 
+3524578, 5702887, 9227465, 14930352, 24157817, 39088169, 63245986, 102334155, 165580141, 267914296,
+ 433494437, 701408733, 1134903170, 1836311903, 2971215073, 4807526976, 7778742049, 12586269025, 20365011074, 
+32951280099, 53316291173, 86267571272, 139583862445, 225851433717, 365435296162, 591286729879, 956722026041,
+ 1548008755920, 2504730781961, 4052739537881, 6557470319842, 10610209857723, 17167680177565, 27777890035288, 
+44945570212853, 72723460248141, 117669030460994, 190392490709135, 308061521170129, 498454011879264, 
+806515533049393, 1304969544928657, 2111485077978050, 3416454622906707, 5527939700884757, 8944394323791464,
+ 14472334024676220, 23416728348467684, 37889062373143900, 61305790721611580, 99194853094755490, 
+160500643816367070, 259695496911122560, 420196140727489660, 679891637638612200, 1100087778366101900,
+ 1779979416004714000, 2880067194370816000, 4660046610375530000, 7540113804746346000, 12200160415121877000, 
+19740274219868226000, 31940434634990100000, 51680708854858330000, 83621143489848430000, 135301852344706760000, 218922995834555200000, …]
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+var n=2343, o=[],
+sNumber=n.toString();
+ for(var i=0,len=sNumber.length;i<len;i++){
+     o.push(+sNumber.charAt(i));
+ }
+ console.log(o);
+output:[2, 3, 4, 3]
+------------------------------------------------------------------------------------------------------------------
+Binary Search:
+function binary_Search(items, value){
+    var firstIndex  = 0,
+        lastIndex   = items.length - 1,
+        middleIndex = Math.floor((lastIndex + firstIndex)/2);
+
+    while(items[middleIndex] != value && firstIndex < lastIndex)
+    {
+       if (value < items[middleIndex])
+        {
+            lastIndex = middleIndex - 1;
+        } 
+      else if (value > items[middleIndex])
+        {
+            firstIndex = middleIndex + 1;
+        }
+        middleIndex = Math.floor((lastIndex + firstIndex)/2);
+    }
+
+ return (items[middleIndex] != value) ? -1 : middleIndex;
+}
+var items = [1, 2, 3, 4, 5, 7, 8, 9];
+console.log(binary_Search(items, 1));   
+console.log(binary_Search(items, 5));
+output:0 ,4
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Frames text:
+function printFrame(arr) {
+    function fill (str, length, char) {
+        return (str.length < length) ? fill(str + char, length, char) : str;
+    }
+
+    let size = arr.map((str) => {
+            return str.length;
+})
+.reduce((a, b) => {
+        return Math.max(a, b);
+});
+
+    let line = fill('', size + 4, '*');
+
+    arr = arr.map((element) => {
+            return '* '+ fill(element, size, ' ') + ' *';
+})
+    arr.unshift(line);
+    arr.push(line);
+
+    return arr.join('\n');;
+}
+
+console.log(printFrame(["Hello", "World", "in", "a", "frame"]));
+output:
+*********
+* Hello *
+* World *
+* in    *
+* a     *
+* frame *
+*********
+---------------------------------------------------------------------------------------------------------------------------------
+Assignment 1:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>HelloWorld</title>
+    </head>
+    <body>
+        <script src="hello.js"></script>
+        <p>
+            <label>Fahrenheit</label>
+             <input id="inputFahrenheit" type="number" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+        </p>
+        <p>Celsius:<span id="outputCelsius"></span></p>
+        </p>    
+
+    </body>
+
+
+</html>
+JavaScript:
+function temperatureConverter(valnum){
+    valnum=parseFloat(valnum);
+    document.getElementById("outputCelsius").innerHTML=(valnum-32)/1.8;
+}
+---------------------------------------------------------------------------------------------------------------------------------------
+Star print:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>HelloWorld</title>
+    </head>
+    <body>
+        <script src="hello.js"></script>
+           <script>
+              var n1=prompt("Enter a number");
+               if(n1>1&&n1<30){
+                   for(var i=1;i<=n1;i++){
+                   document.write("*");
+               }
+            }
+            </script><br>
+            <script>
+               var n2=prompt("Enter a number");
+               if(n2>1&&n2<30){
+                   for(var i=1;i<=n2;i++){
+                   document.write("*");
+               }
+            }
+            </script><br>
+            <script>
+               var n3=prompt("Enter a number");
+               if(n3>1&&n3<30){
+                   for(var i=1;i<=n3;i++){
+                   document.write("*");
+               }
+            }
+           </script>
+    </body>
+</html>
+output:
+****
+******
+************
+---------------------------------------------------------------------------------------------------------------------
+User Defined Table:
+<!DOCTYPE html> 
+    <html> 
+        <head> 
+        <meta charset=utf-8 /> 
+        <title>Create a table</title>   
+        </head>
+        <body> 
+            <script src="hello.js"></script>
+            <table id="myTable" border="1"> 
+            </table><form> 
+            <input type="button" onclick="createTable()" value="Create the table"> 
+            </form>
+        </body>
+    </html>
+Js:
+function createTable()
+{
+rn = window.prompt("Input number of rows", 1);
+cn = window.prompt("Input number of columns",1);
+  
+ for(var r=0;r<parseInt(rn,10);r++)
+  {
+   var x=document.getElementById('myTable').insertRow(r);
+   for(var c=0;c<parseInt(cn,10);c++)  
+    {
+     var y=  x.insertCell(c);
+     y.innerHTML="Row-"+r+" Column-"+c; 
+    }
+   }
+}
+----------------------------------------------------------------------------------------------------------------------

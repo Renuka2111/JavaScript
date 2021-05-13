@@ -1,0 +1,196 @@
+1.class Rectangle{
+   constructor(height,width){
+      this.height=height;
+      this.width=width;
+   }
+   
+}
+var object=new Rectangle(3,5);
+Console screen:
+object.height
+3
+object.width
+5
+-----------------------------------------
+2.class Rectangle{
+   constructor(height,width){
+      this.height=height;
+      this.width=width;
+   }
+   area(){
+      return this.width*this.height;
+   }
+}
+var object=new Rectangle(3,5);
+Console:
+object.area();
+15
+---------------------------------------------
+3.class Rectangle{
+   constructor(height,width){
+      this.height=height;
+      this.width=width;
+   }
+   area(){
+      return this.width*this.height;
+   }
+}
+var r=new Rectangle(4,5);
+console:
+r.height
+4
+r.area()
+20
+r.width
+5
+------------------------------------------------------
+4.var person={
+   firstname:"Renuka",
+   lastname:"Deshpande"
+};
+Console:
+person.firstname
+"Renuka"
+person.lastname
+"Deshpande"
+---------------------------------------------------
+5.var person={
+   firstname:"Renuka",
+   middlename:"Shriram",
+   lastname:"Deshpande"
+};
+console:
+person.middlename
+"Shriram"
+-----------------------------------------------------
+6.var string="{firstname:'Renuka',lastname:'Deshpande'}";
+eval('var obj='+string);
+console:
+obj.firstname
+"Renuka"
+obj.lastname
+"Deshpande"
+-----------------------------------------------------------------
+7.var obj=JSON.parse('{"firstname":"Renuka","lastname":"Deshpande"}');
+Console:
+obj.firstname
+"Renuka"
+obj.lastname
+"Deshpande
+------------------------------------------------------------------------
+PersonObjectClass:
+var person={
+   fname:"John",
+   lname:"Doe",
+   age:56,
+   skills:['Painting','writing'],
+   address:{
+      city:"NewYork",
+      pincode:111005
+            },
+   dateOfBirth:02-8-1953,
+   married:true,
+   profession:"Teacher"
+};
+-----------------------------------------------------------------------------
+1.function person(fname,lname,age,skills,dateOfBirth,address,married,profession)
+{
+   this.fname=fname;
+   this.lname=lname;
+   this.age=age;
+   this.skills=skills;
+   this.dateOfBirth=dateOfBirth;
+   this.address=address;
+   this.married=married;
+   this.profession=profession;
+}
+person1=new person("nikhil","goud",22,["c"],"24/10/1996",{city:"hyderabad",pincode:"521185"},"false","sr analyst");
+person2=new person("harish","chinna",21,"HTML","08/06/1997",{city:"Ameerpret",pincode:"500038"},"false","jr analyst");
+
+print=function(){
+   console.log(person1);
+   console.log(person2);
+}();
+person {fname: "nikhil", lname: "goud", age: 22, skills: Array(1), dateOfBirth: "24/10/1996", …}
+hello.js:17 person {fname: "harish", lname: "chinna", age: 21, skills: "HTML", dateOfBirth: "08/06/1997", …}
+----------------------------------------------------------------------------------------------------------------------------------------
+2.function person(fname,lname,age,skills,dateOfBirth,address,married,profession)
+{
+   this.fname=fname;
+   this.lname=lname;
+   this.age=age;
+   this.skills=skills;
+   this.dateOfBirth=dateOfBirth;
+   this.address=address;
+   this.married=married;
+   this.profession=profession;
+}
+amithab=new person("amithab","bachan",22,["c"],"24/10/1996",{city:"hyderabad",pincode:"521185"},"false","sr analyst");
+abhisheik=new person("abhisheik",21,"HTML","08/06/1997","false","jr analyst");
+var abhisheik=Object.create(amithab);
+
+print=function(){
+   console.log(amithab);
+   console.log(abhisheik.lname);
+   console.log(abhisheik.address);
+}();
+console:
+person {fname: "amithab", lname: "bachan", age: 22, skills: Array(1), dateOfBirth: "24/10/1996", …}address: {city: "hyderabad", pincode: "521185"}age: 22dateOfBirth: "24/10/1996"fname: "amithab"lname: "bachan"married: "false"profession: "sr analyst"skills: ["c"]__proto__: Object
+hello.js:18 bachan
+hello.js:19 {city: "hyderabad", pincode: "521185"}
+city: "hyderabad"
+pincode: "521185"
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.function person(fname,lname,age,skills,dateOfBirth,address,married,profession)
+{
+   this.fname=fname;
+   this.lname=lname;
+   this.age=age;
+   this.skills=skills;
+   this.dateOfBirth=dateOfBirth;
+   this.address=address;
+   this.married=married;
+   this.profession=profession;
+}
+amithab=new person("amithab","bachan",22,["c"],"24/10/1996",{city:"hyderabad",pincode:"521185"},"false","sr analyst");
+abhisheik=new person("abhisheik",21,"HTML","08/06/1997","false","jr analyst");
+var abhisheik=Object.create(amithab);
+aaradhya=new person("aaradhya",15,"Java","false");
+var aaradhya=Object.create(abhisheik);
+print=function(){
+   console.log(amithab);
+   console.log(abhisheik.lname);
+   console.log(abhisheik.address);
+   console.log(aaradhya.lname);
+}();
+output:person {fname: "amithab", lname: "bachan", age: 22, skills: Array(1), dateOfBirth: "24/10/1996", …}
+hello.js:19 bachan
+hello.js:20 {city: "hyderabad", pincode: "521185"}
+hello.js:21 bachan
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.function BackAccount(accountNumber,accountHolderName,accountBalance){
+   this.accountNumber=accountNumber;
+   this.accountHolderName=accountHolderName;
+   this.accountBalance=accountBalance;
+   
+   this.isSalary=function(salary){
+      console.log((accountBalance-salary));
+   },
+   this.isoddLimit=function(current){
+      console.log((accountBalance-current));
+   }
+}
+
+var object1=new BackAccount(77444555,"Balaji",23000);
+object1.isSalary(10000);
+
+var object2=new BackAccount(77444556,"Radha",25000);
+object2.isoddLimit(5000);
+
+console.log(object1.accountBalance);
+console.log(object2.accountBalance);
+output:
+13000
+hello.js:10 20000
+hello.js:20 23000
+hello.js:21 25000

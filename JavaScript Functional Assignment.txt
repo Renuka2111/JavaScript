@@ -1,0 +1,118 @@
+1.var f1=function square(x){ return(x*x);}
+var f2=function double(x){ return(x*2);}
+
+function composedValue(f1,f2,x){
+   return f1(f2(x));
+}
+console.log(composedValue(f1,f2,5));
+output:100
+
+2.var x;
+function double(x){ return x*2;}
+function square(x){ return x*x;}
+
+function compose(square,double,x){
+   return square(double(x));
+}
+
+var f1=compose(square,double,5);
+console.log(f1);
+output:100
+var f1=compose(square,double,10);
+console.log(f1);
+output:400
+
+var f2=compose(double,square,10);
+console.log(f2);
+output:200
+var f2=compose(double,square,5);
+console.log(f2);
+output:50
+
+
+3.function test(n){
+   if(n%2==0)
+      return true;
+   else 
+      return false;
+}
+function find(arr1,test){
+   for(var i=0;i<=arr1.length-1;i++){
+      if(test(arr1[i])===true){
+         return arr1[i];
+         break;
+      }
+   }
+
+}
+console.log(find([8,3,5,4,2],test));
+output:8
+
+4.function f1(x){
+   return(x*x);
+}
+function map(arr,f1){
+   var arr1=[];
+   for(var i=0;i<=arr.length-1;i++){
+      var result=f1(arr[i]);
+      arr1.push(result);
+   }
+   return arr1;
+}
+console.log(map([1,2,3,4,5],f1));
+output:[1,4,9,16,25]
+SquareRoot:
+
+function map(arr, Mathsqrt){
+   var arr1=[];
+   for(var i=0;i<=arr.length-1;i++){
+      var result=Math.sqrt(arr[i]);
+      arr1.push(result);
+   }
+   return arr1;
+}
+console.log(map([1,4,9,16,25],Math.sqrt));
+output:
+[1, 2, 3, 4, 5]
+
+Advanced 
+1.function test(n){
+   if(n%2==0)
+      return true;
+   else 
+      return false;
+}
+var count=0;
+function find(arr1,test){
+      
+      if(test(arr1[count])===true){
+         return arr1[count];
+      }
+      else{
+         count++;
+         return find(arr1,test);
+      }
+   }
+
+
+console.log(find([1,3,5,0,2],test));
+output:0
+
+2.var cnt=0,num,no,res;
+function square(num){return num*num;}
+function map(arr,square){
+   var max=arr.lenght;
+   while(cnt<max){
+      num=arr.slice(cnt,cnt+1);
+      no=num.pop();
+      console.log(no);
+      res=square(no);
+      cnt++;
+      console.log(res);
+      map(arr,square);
+
+   }
+
+}
+
+console.log(map([1,2,3,4,5],square));
